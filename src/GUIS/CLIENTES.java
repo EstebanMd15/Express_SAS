@@ -13,8 +13,8 @@ public class CLIENTES extends javax.swing.JFrame {
     }
 
     
-    public void listar(String tabla){
-        String sql = "SELEC * FROM CLIENTE " + tabla;
+    public void listar(){
+        String sql = "SELECT * FROM CLIENTE ";
         
         DefaultTableModel model = new DefaultTableModel();
         model.addColumn("ID_CLIENTE");
@@ -316,6 +316,7 @@ public class CLIENTES extends javax.swing.JFrame {
     private void BTN_Guardar_ClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_Guardar_ClientesActionPerformed
         METODOS_CLIENTE mt = new METODOS_CLIENTE(this);
         mt.guardar();
+        listar();
     }//GEN-LAST:event_BTN_Guardar_ClientesActionPerformed
 
     private void BTN_Buscar_ClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_Buscar_ClientesActionPerformed
@@ -327,17 +328,19 @@ public class CLIENTES extends javax.swing.JFrame {
     private void BTN_Modificar_ClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_Modificar_ClientesActionPerformed
         METODOS_CLIENTE mt = new METODOS_CLIENTE(this);
         mt.modificar();
+        listar();
         // TODO add your handling code here:
     }//GEN-LAST:event_BTN_Modificar_ClientesActionPerformed
 
     private void BTN_Eliminar_ClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_Eliminar_ClientesActionPerformed
         METODOS_CLIENTE mt = new METODOS_CLIENTE(this);
         mt.eliminar();
+        listar();
         // TODO add your handling code here:
     }//GEN-LAST:event_BTN_Eliminar_ClientesActionPerformed
 
     private void BTN_Listar_ClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_Listar_ClientesActionPerformed
-        listar("CLIENTE");
+        listar();
         // TODO add your handling code here:
     }//GEN-LAST:event_BTN_Listar_ClientesActionPerformed
 

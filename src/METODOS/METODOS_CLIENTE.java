@@ -102,7 +102,7 @@ public class METODOS_CLIENTE implements ActionListener {
                     cl.Campo_Nombre_Clientes.setText("");
                     cl.Campo_Telefono_Clientes.setText("");
                 }
-                JOptionPane.showMessageDialog(null, "CLIENTE ELIMINADO");
+                JOptionPane.showMessageDialog(null, "CLIENTE "+ nombre +"  ELIMINADO CON EXITO");
             }
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "[ERROR AL CONECTAR CON LA BD]: " + e.getMessage());
