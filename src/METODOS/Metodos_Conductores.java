@@ -125,7 +125,7 @@ public class Metodos_Conductores implements ActionListener {
 
         try {
             int id = Integer.parseInt(idf);
-            PreparedStatement buscar = CONEXION_BD.conectar().prepareStatement(idf);
+            PreparedStatement buscar = CONEXION_BD.conectar().prepareStatement(query);
             buscar.setInt(1, id);
             ResultSet rs = buscar.executeQuery();
             if (rs.next()) {

@@ -91,7 +91,6 @@ public class CLIENTES extends javax.swing.JFrame {
         jLabel6.setText("DIRECCION:");
 
         Campo_Id_Cliente.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        Campo_Id_Cliente.setForeground(new java.awt.Color(0, 0, 0));
         Campo_Id_Cliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Campo_Id_ClienteActionPerformed(evt);
@@ -99,7 +98,6 @@ public class CLIENTES extends javax.swing.JFrame {
         });
 
         Campo_Telefono_Clientes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        Campo_Telefono_Clientes.setForeground(new java.awt.Color(0, 0, 0));
         Campo_Telefono_Clientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Campo_Telefono_ClientesActionPerformed(evt);
@@ -107,7 +105,6 @@ public class CLIENTES extends javax.swing.JFrame {
         });
 
         Campo_Nombre_Clientes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        Campo_Nombre_Clientes.setForeground(new java.awt.Color(0, 0, 0));
         Campo_Nombre_Clientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Campo_Nombre_ClientesActionPerformed(evt);
@@ -115,7 +112,6 @@ public class CLIENTES extends javax.swing.JFrame {
         });
 
         Campo_Direccion_Clientes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        Campo_Direccion_Clientes.setForeground(new java.awt.Color(0, 0, 0));
         Campo_Direccion_Clientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Campo_Direccion_ClientesActionPerformed(evt);
@@ -173,7 +169,6 @@ public class CLIENTES extends javax.swing.JFrame {
         });
 
         TABLA_CLIENTES.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        TABLA_CLIENTES.setForeground(new java.awt.Color(0, 0, 0));
         TABLA_CLIENTES.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -199,17 +194,6 @@ public class CLIENTES extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(BTN_Guardar_Clientes)
-                .addGap(123, 123, 123)
-                .addComponent(BTN_Buscar_Clientes)
-                .addGap(132, 132, 132)
-                .addComponent(BTN_Modificar_Clientes)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 162, Short.MAX_VALUE)
-                .addComponent(BTN_Eliminar_Clientes)
-                .addGap(26, 26, 26))
-            .addComponent(jScrollPane1)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -241,6 +225,21 @@ public class CLIENTES extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(BTN_Salir_Clientes)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(BTN_Guardar_Clientes)
+                        .addGap(123, 123, 123)
+                        .addComponent(BTN_Buscar_Clientes)
+                        .addGap(132, 132, 132)
+                        .addComponent(BTN_Modificar_Clientes)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)
+                        .addComponent(BTN_Eliminar_Clientes)
+                        .addGap(26, 26, 26))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

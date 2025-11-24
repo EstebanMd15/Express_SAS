@@ -1,6 +1,12 @@
 package GUIS;
 import GUIS.MENU;
 import METODOS.Metodos_Conductores;
+import express_sas.CONEXION_BD;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 public class CONDUCTORES extends javax.swing.JFrame {
 Metodos_Conductores mt = new Metodos_Conductores(this);
         
@@ -9,7 +15,33 @@ Metodos_Conductores mt = new Metodos_Conductores(this);
         initComponents();
     }
     
-    
+       public void listar() {
+        String sql = "SELECT * FROM CONDUCTOR";
+
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("ID_CONDUCTOR");
+        model.addColumn("NOMBRE");
+        model.addColumn("TELEFONO");
+        model.addColumn("DIRECCION");
+        model.addColumn("SALARIO");
+        TABLA_CONDUCTORES.setModel(model);
+
+        String[] datos = new String[5];
+        try {
+            PreparedStatement listar = CONEXION_BD.conectar().prepareStatement(sql);
+            ResultSet rs = listar.executeQuery();
+            while (rs.next()) {
+                datos[0] = rs.getString(1);
+                datos[1] = rs.getString(2);
+                datos[2] = rs.getString(3);
+                datos[3] = rs.getString(4);
+                datos[4] = rs.getString(5);
+                model.addRow(datos);
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "[ERROR AL CONECTAR CON LA BD]: " + e.getMessage());
+        }
+    }
 
    
     @SuppressWarnings("unchecked")
@@ -286,7 +318,8 @@ Metodos_Conductores mt = new Metodos_Conductores(this);
     }//GEN-LAST:event_BTN_Eliminar_ConductorActionPerformed
 
     private void BTN_Listar_ConductorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_Listar_ConductorActionPerformed
-        // TODO add your handling code here:
+        listar();
+        
     }//GEN-LAST:event_BTN_Listar_ConductorActionPerformed
 
     /**

@@ -28,7 +28,7 @@ public class Metodos_Ciudad implements ActionListener {
         String idf = cu.Campo_Id_Ciudad.getText().trim();
         String nombre = cu.Campo_Nombre_Ciudad.getText().trim();
         String query = "INSERT INTO CIUDAD (ID_CIUDAD, NOMBRE_CIUDAD) VALUES (?,?)";
-        ;
+        
         try {
             int id = Integer.parseInt(idf);
             PreparedStatement guardar = CONEXION_BD.conectar().prepareStatement(query);
