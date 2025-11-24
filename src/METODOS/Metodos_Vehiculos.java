@@ -110,7 +110,7 @@ public class Metodos_Vehiculos implements ActionListener {
 
     public void eliminar() {
         String placa = vh.Campo_Placa_Vehiculo.getText().trim();
-        String query = "DELETE FROM PAQUETE WHERE PLACA =?";
+        String query = "DELETE FROM VEHICULO WHERE PLACA =?";
         try {
             PreparedStatement eliminar = CONEXION_BD.conectar().prepareStatement(query);
             eliminar.setString(1, placa);
